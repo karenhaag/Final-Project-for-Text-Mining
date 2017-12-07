@@ -5,6 +5,8 @@ El aprendizaje semi-supervisado es una clase de técnicas de aprendizaje automá
 
 En este proyecto se busca evaluar tres técnicas semi-supervisadas. Cada una toma como dato de entrada un lexicón etiquetado con sentimiento y busca aumentar este mediante self-learning. Luego, se testean con un clasificador en un corpus anotado de twitter con sentimiento y se evalua la performance de cada una de las técnicas en las distintas iteraciones.
 
+Todo el código del proyecto se encuentra online en el siguiente [repositorio](https://github.com/karenhaag/final-project-for-text-mining)
+
 ## 2. Corpus
 Se utilizaron tres corpus: 
 1. Lexicón en español
