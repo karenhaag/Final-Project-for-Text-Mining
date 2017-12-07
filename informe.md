@@ -68,7 +68,6 @@ Luego volvemos a iterar con el lexicón aumentado.
 Para esta técnica se utilizó la librería [Label Propagation](http://scikit-learn.org/stable/modules/generated/sklearn.semi_supervised.LabelPropagation.html#sklearn.semi_supervised.LabelPropagation) de Scikit Learn.  En la cual el algoritmo toma como entrada dos matrices densas. La primera es de la forma [n_samples, k_features] en la cual cada fila tiene la vectorización de los ejemplos de entrenamiento. Y la segunda matriz es un vector [n_labels] el cual contiene la clase a la que pertenece cada palabra. Por defecto las palabras no etiquetadas, a las que le queremos propagar sentimiento deben tener en su celda correspondiente en el vector el valor -1. Por lo tanto a las palabras etiquetadas con valor negativo le asignamos el valor 0 en el vector de labels y a las asignadas con valor positivo le asignamos el valor 1. Para la matriz de features utilizamos la descripta en la sección 4.
 Al final de la propagación agregamos al lexicón las nuevas palabras asociadas a alguna de las dos clases y volvemos a iterar.
 
-Lamentablemente debido a los pocos datos de entrenamiento el algotirmo no converge por lo cua
 
 ## 6. Clasificador
 Construímos un clasificador por votación. Dado un tweet y un lexicón(lexicón inicial o aumentado con alguna de las técnicas) el clasificador inicia un conteo en el cual cuenta la cantidad de palabras positivas y la cantidad de palabras negativas y le asigna la polaridad asociada a la clase mayoritaria.
